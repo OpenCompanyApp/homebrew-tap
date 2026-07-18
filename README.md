@@ -1,18 +1,23 @@
-# OpenCompanyApp Tap
+# OpenCompanyApp Homebrew Tap
 
-## How do I install these formulae?
+Fork-owned Homebrew packages maintained by
+[OpenCompanyApp](https://github.com/OpenCompanyApp).
 
-`brew install opencompanyapp/tap/<formula>`
+## Grok Build Enhanced
 
-Or `brew tap opencompanyapp/tap` and then `brew install <formula>`.
+Install the unofficial Grok Build Enhanced fork on macOS:
 
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "opencompanyapp/tap"
-brew "<formula>"
+```sh
+brew install --cask OpenCompanyApp/tap/grok-build-enhanced
 ```
 
-## Documentation
+Upgrade or uninstall it with:
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```sh
+brew upgrade --cask OpenCompanyApp/tap/grok-build-enhanced
+brew uninstall --cask OpenCompanyApp/tap/grok-build-enhanced
+```
+
+The cask downloads native, checksummed binaries only from
+[`OpenCompanyApp/grok-build-enhanced`](https://github.com/OpenCompanyApp/grok-build-enhanced/releases).
+It does not use official xAI installers, npm packages, or artifact buckets.
