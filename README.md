@@ -5,7 +5,7 @@ Fork-owned Homebrew packages maintained by
 
 ## Grok Build Enhanced
 
-Install the unofficial Grok Build Enhanced fork on macOS:
+Install the unofficial Grok Build Enhanced fork on macOS or Linux:
 
 ```sh
 brew install --formula OpenCompanyApp/tap/grok-build-enhanced
@@ -20,6 +20,6 @@ brew uninstall --formula OpenCompanyApp/tap/grok-build-enhanced
 
 The Formula downloads native, checksummed binaries only from
 [`OpenCompanyApp/grok-build-enhanced`](https://github.com/OpenCompanyApp/grok-build-enhanced/releases).
-It does not use official xAI installers, npm packages, or artifact buckets. A
-Formula is used instead of a Cask so Homebrew does not place this unnotarized
-CLI binary behind Cask quarantine.
+It does not use official xAI installers, npm packages, or artifact buckets. On
+macOS, a Formula is used instead of a Cask so Homebrew does not place this
+unnotarized CLI binary behind Cask quarantine.

@@ -4,8 +4,6 @@ class GrokBuildEnhanced < Formula
   version "0.2.2"
   license "Apache-2.0"
 
-  depends_on :macos
-
   on_macos do
     on_arm do
       url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-macos-aarch64"
@@ -18,8 +16,22 @@ class GrokBuildEnhanced < Formula
     end
   end
 
+  on_linux do
+    on_arm do
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-linux-aarch64"
+      sha256 "a695c18888c77dec8156a52e619b30a4dda7836a70791c9187ba4373e533e171"
+    end
+
+    on_intel do
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-linux-x86_64"
+      sha256 "6b1e98557dc309235ed6afaa45bbc684c86466db0f200e86335ad6fdd9fe6173"
+    end
+  end
+
   def install
-    asset = Hardware::CPU.arm? ? "grok-#{version}-macos-aarch64" : "grok-#{version}-macos-x86_64"
+    os = OS.mac? ? "macos" : "linux"
+    arch = Hardware::CPU.arm? ? "aarch64" : "x86_64"
+    asset = "grok-#{version}-#{os}-#{arch}"
     bin.install asset => "grok"
     chmod 0755, bin/"grok"
     bin.install_symlink "grok" => "agent"
