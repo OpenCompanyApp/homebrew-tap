@@ -18,6 +18,13 @@ brew upgrade --formula OpenCompanyApp/tap/grok-build-enhanced
 brew uninstall --formula OpenCompanyApp/tap/grok-build-enhanced
 ```
 
+If you installed the short-lived `v0.2.1` Cask, migrate once with:
+
+```sh
+brew uninstall --cask OpenCompanyApp/tap/grok-build-enhanced
+brew install --formula OpenCompanyApp/tap/grok-build-enhanced
+```
+
 The Formula downloads native, checksummed binaries only from
 [`OpenCompanyApp/grok-build-enhanced`](https://github.com/OpenCompanyApp/grok-build-enhanced/releases).
 It does not use official xAI installers, npm packages, or artifact buckets. On
