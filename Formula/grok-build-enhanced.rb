@@ -1,30 +1,30 @@
 class GrokBuildEnhanced < Formula
   desc "Terminal AI coding assistant maintained as an unofficial Grok Build fork"
   homepage "https://github.com/OpenCompanyApp/grok-build-enhanced"
-  version "0.2.2"
+  version "0.2.3"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-macos-aarch64"
-      sha256 "a36d44615efb326a4f326031d339fa797e8d0f3e2e9799e8cc317b86b6b38b12"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.3/grok-0.2.3-macos-aarch64"
+      sha256 "25dd615cea07747acd641f64ce15c63ddd583ade8236e2c83413ff028ee65f4d"
     end
 
     on_intel do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-macos-x86_64"
-      sha256 "9d28239db812f35c65a635dd49d4a262e3e35809a11c318df234e33c6df757c0"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.3/grok-0.2.3-macos-x86_64"
+      sha256 "0b68bf059a00b8212e47d9e6b6a7987efaf1ab57a28fce869db1e31f7b11a2d7"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-linux-aarch64"
-      sha256 "a695c18888c77dec8156a52e619b30a4dda7836a70791c9187ba4373e533e171"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.3/grok-0.2.3-linux-aarch64"
+      sha256 "0b39658380f6234c69c24e62879101feb828a95481b810a538c6f70c321ecf51"
     end
 
     on_intel do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.2/grok-0.2.2-linux-x86_64"
-      sha256 "6b1e98557dc309235ed6afaa45bbc684c86466db0f200e86335ad6fdd9fe6173"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.2.3/grok-0.2.3-linux-x86_64"
+      sha256 "d1935601b59d251cec72147131cd0d0cf8be463bd0576e701266feb0ba8dddac"
     end
   end
 
