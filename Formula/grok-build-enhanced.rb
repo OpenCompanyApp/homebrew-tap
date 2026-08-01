@@ -1,7 +1,6 @@
 class GrokBuildEnhanced < Formula
   desc "Terminal AI coding assistant maintained as an unofficial Grok Build fork"
   homepage "https://github.com/OpenCompanyApp/grok-build-enhanced"
-  version "0.3.3"
   license "Apache-2.0"
 
   on_macos do
