@@ -5,25 +5,25 @@ class GrokBuildEnhanced < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.5/grok-0.3.5-macos-aarch64"
-      sha256 "2e8d70555e24979d189def280d1ae48a1150069704528ff4e6464e3c512a6f79"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.6/grok-0.3.6-macos-aarch64"
+      sha256 "aa1f2aafc0911cacdeb371313df0bb7366b9ae16eefa245bee74da8ee7ac3816"
     end
 
     on_intel do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.5/grok-0.3.5-macos-x86_64"
-      sha256 "2ddfe3d82c4f10812835f4c00fe54dbf80dd85346f6b715b3e76ebbd02bd13eb"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.6/grok-0.3.6-macos-x86_64"
+      sha256 "c3e7d2ff1472ac6ecd5c7ce933ac49294c1b10bdfd5bd261fde94561f8a9607e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.5/grok-0.3.5-linux-aarch64"
-      sha256 "ed4aec6466782dcf4b1030ab606b42a86743fb0d0a90e120f747722fecedec79"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.6/grok-0.3.6-linux-aarch64"
+      sha256 "5e586ef3f4c70df89aa224c7efa9c9cded5b007ab3f5228d5374abf9a1e99afc"
     end
 
     on_intel do
-      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.5/grok-0.3.5-linux-x86_64"
-      sha256 "6e7399d0feedf5222fef9503210d3404616ebba6933bde148bffce6fff32aa44"
+      url "https://github.com/OpenCompanyApp/grok-build-enhanced/releases/download/v0.3.6/grok-0.3.6-linux-x86_64"
+      sha256 "abc088012e97183194ded3b14cb3d0ecf7af68b710b43c49e5e05ec382eabe9b"
     end
   end
 
