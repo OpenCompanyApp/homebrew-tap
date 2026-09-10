@@ -41,6 +41,26 @@ jobs:
 
       - run: brew test-bot --only-setup
 
+      - name: Cache GMP source for Intel lint tools
+        if: matrix.os == 'macos-15-intel'
+        shell: bash
+        run: |
+          set -euo pipefail
+          gmp_metadata=$(brew info --json=v2 gmp)
+          gmp_url=$(jq -r '.formulae[0].urls.stable.url' <<< "$gmp_metadata")
+          gmp_sha256=$(jq -r '.formulae[0].urls.stable.checksum' <<< "$gmp_metadata")
+          gmp_archive=${gmp_url##*/}
+          [[ "$gmp_archive" =~ ^gmp-[0-9][0-9.]*\.tar\.(xz|bz2|gz)$ ]]
+          [[ "$gmp_sha256" =~ ^[0-9a-f]{64}$ ]]
+          gmp_cache=$(brew --cache --build-from-source gmp)
+          mkdir -p "$(dirname "$gmp_cache")"
+          gmp_download=$(mktemp "${gmp_cache}.XXXXXX")
+          trap 'rm -f "$gmp_download"' EXIT
+          curl --fail --location --retry 3 --connect-timeout 15 --max-time 120 \
+            "https://ftp.gnu.org/gnu/gmp/$gmp_archive" --output "$gmp_download"
+          printf '%s  %s\n' "$gmp_sha256" "$gmp_download" | shasum -a 256 --check -
+          mv "$gmp_download" "$gmp_cache"
+
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
